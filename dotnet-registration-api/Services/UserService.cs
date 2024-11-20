@@ -17,19 +17,14 @@ namespace dotnet_registration_api.Services
         {
            return await _userRepository.GetAllUsers();
         }
-        public async Task<User> GetById(int id)
+        public async Task<User?> GetById(int id)
         {
             return await _userRepository.GetUserById(id);
         }
 
-        public async Task<User> GetByUserName(string name)
+        public async Task<User>> GetByUserName(string name)
         {
             return await _userRepository.GetUserByUsername(name);
-        }
-
-        public async Task<User> Login(LoginRequest login)
-        {
-            throw new NotImplementedException();
         }
 
         public async Task<User> Register(User user)
